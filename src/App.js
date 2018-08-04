@@ -13,11 +13,12 @@ class App extends Component {
     }
     this.selectCity = this.selectCity.bind(this);
     this.apiPersons()
+
   }
 
   apiPersons() {
     fetch(
-      "https://randomuser.me/api/?results=50"
+      "https://randomuser.me/api/?results=30"
     )
       .then((response) => {
         return response.json();
@@ -31,19 +32,31 @@ class App extends Component {
       })
   }
   selectCity(event) {
-    const city = event.currentTarget.value;
-    this.setState({
-      citySearch: city
-    })
+    if (event.currentTarget.getAttribute('id') === 'city') {
+      const city = event.currentTarget.value;
+      return (
+        this.setState({
+          citySearch: city
+        })
+      )
+    }
+    else {
+      const gender = event.currentTarget.value;
+      return (
+        this.setState({
+          genderSearch: gender
+        })
+      );
+    }
   }
 
   render() {
     return (
       <div className="App">
-        <Search listPersons={this.state.persons} selectCity={this.selectCity}/>
+        <Search listPersons={this.state.persons} selectCity={this.selectCity} />
         <ul className="listPersons">
           <li>
-            <Person listPersons={this.state.persons} citylocation={this.state.citySearch}/>
+            <Person listPersons={this.state.persons} citylocation={this.state.citySearch} genderfilter={this.state.genderSearch} />
           </li>
         </ul>
       </div>

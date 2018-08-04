@@ -3,12 +3,15 @@ import React from 'react';
 class Person extends React.Component {
     render() {
         return (
-            this.props.listPersons.filter( person => {
+            this.props.listPersons.filter( (person) => {
                 return person.location.city.toLocaleLowerCase().includes(this.props.citylocation.toLocaleLowerCase());
+            })
+            .filter( (personsome) => {
+                return (personsome.gender === this.props.genderfilter)
             })
             .map((persona) => {
                 return (
-                    <div className="user">
+                    <div className="user" key={persona.login.uuid}>
                         <div className="photo__container">
                             <img src={persona.picture.medium} alt="profile face" />
                         </div>

@@ -21,3 +21,15 @@
 .person__data--name {
   text-transform: capitalize;
 }
+.select{
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  text-align: center;
+}
+.filterSearch {
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+}
