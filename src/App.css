@@ -1,28 +1,23 @@
 .App {
-  text-align: center;
+  display: flex;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.listPersons {
+  display: flex;
+  list-style: none;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.user {
+  border-bottom: 1px solid rgb(40, 168, 151);
+  display: grid;
+  grid-template-columns: 30% 1fr;
 }
+.photo__container {
 
-.App-title {
-  font-size: 1.5em;
 }
-
-.App-intro {
-  font-size: large;
+.person__data{
+  text-transform: capitalize;
+  text-align: left;
+  
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.person__data--name {
+  text-transform: capitalize;
 }
