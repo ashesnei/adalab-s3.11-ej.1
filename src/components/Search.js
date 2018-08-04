@@ -16,13 +16,13 @@ class Search extends React.Component {
                 </select>
                 <label htmlFor="gender">Filtrar por género</label>
                 <label>
-                    <input type="radio" name="gender" checked /> Todos
+                    <input onChange={this.props.selectCity} type="radio" name="gender" value=""/> Todos
                 </label>
                 <label>
-                    <input onChange={this.props.selectCity} type="radio" name="gender" value="male" /> Hombre
+                    <input onChange={this.props.selectCity} type="radio" name="gender" value="female" /> Hombre
                 </label>
                 <label>
-                    <input onChange={this.props.selectCity} type="radio" name="gender" value="female" /> Mujer
+                    <input onChange={this.props.selectCity} type="radio" name="gender" value="male" /> Mujer
                 </label>
             </div >
         );

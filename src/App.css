@@ -4,6 +4,7 @@
 .listPersons {
   display: flex;
   list-style: none;
+
 }
 .user {
   border-bottom: 1px solid rgb(40, 168, 151);
@@ -23,13 +24,14 @@
 }
 .select{
   text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  height: 20px;
-  text-align: center;
+  height: 25px;
+  line-height: 25px;
+  background-color: rgb(183, 255, 249);
 }
 .filterSearch {
   display: flex;
-  height: 200px;
+  height: 100vh;
   flex-direction: column;
+  background-color: rgb(0, 95, 107);
+  color: white;
 }
